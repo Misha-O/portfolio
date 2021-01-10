@@ -1,0 +1,88 @@
+.btn {
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: 3px solid #ed5565;
+  color: #ed5565;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  position: relative;
+  top: 80px;
+  overflow: hidden;
+  transition: all 0.5s;
+  display: inline-block;
+
+  &.btn--cv {
+    padding: 9px 20px;
+  }
+
+  @include tablets {
+    padding: 8px 20px;
+  }
+
+  &:hover {
+    color: white;
+  }
+  &::before {
+    content: "";
+    background-color: #ed5565;
+    position: absolute;
+    // left: 0;
+    left: -250px;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  &:hover::before {
+    height: 100%;
+    left: 0;
+  }
+}
+
+.button {
+  height: $font-size * 2.9;
+  width: $font-size * 10.5;
+  & button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid $font-color-c;
+    background: $font-color-c;
+    color: $font-color-b;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: crimson;
+      background: none;
+    }
+  }
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: $font-color-c;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: $font-color-b;
+  z-index: $zIndex + 1;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+  }
+}

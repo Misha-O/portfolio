@@ -1,0 +1,87 @@
+.hero {
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
+
+  & .max-width {
+    margin: auto 0 auto $font-size * 2.5;
+
+    @include desktop-a {
+      margin-left: 0;
+    }
+    @include desktop-b {
+      margin-left: 0;
+    }
+
+    & .hero__content {
+      & .hero__title {
+        color: $font-color-a;
+        font-size: $font-size * 5;
+        font-weight: 500;
+        padding-left: 10px;
+
+        @include desktop-d {
+          font-size: $font-size * 4;
+        }
+        @include tablets {
+          font-size: $font-size * 3.5;
+        }
+        @include phones {
+          font-size: $font-size * 3;
+        }
+      }
+
+      & span {
+        display: inline-block;
+
+        &:hover {
+          color: #48cfad;
+          transition: all 0.5s;
+        }
+
+        &.name {
+          color: $font-color-a;
+        }
+
+        &.m-left {
+          margin-left: -10px;
+        }
+      }
+
+      & .hero__role {
+        font-size: $font-size * 2.5;
+
+        @include desktop-d {
+          font-size: $font-size * 2.2;
+        }
+        @include tablets {
+          font-size: $font-size * 1.9;
+        }
+        @include phones {
+          font-size: $font-size * 1.6;
+        }
+      }
+      & .hero__content--skills {
+        margin: 25px 0;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+        font-size: $font-size * 2;
+
+        & span {
+          color: #48cfad;
+          font-weight: 700;
+        }
+
+        @include desktop-d {
+          font-size: $font-size * 1.8;
+        }
+        @include desktop-d {
+          font-size: $font-size * 1.5;
+        }
+        @include desktop-d {
+          font-size: $font-size * 1.2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+footer {
+  text-align: center;
+  background: $font-color-d;
+  padding: 20px;
+  color: $font-color-b;
+  & .copyright {
+    & span {
+      color: $font-color-c;
+    }
+  }
+}

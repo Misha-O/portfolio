@@ -1,0 +1,113 @@
+.contact {
+  margin-bottom: $font-size * 3.2;
+
+  & .contact__title {
+    &::after {
+      content: "get in touch";
+    }
+  }
+
+  & .contact-content {
+    @include flexWrap;
+    color: $font-color-b;
+
+    & .column {
+      width: calc(50% - 30px);
+
+      @include tablets {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+
+      &.left {
+        & .text {
+          font-size: $font-size * 1.5;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        & p {
+          text-align: justify;
+        }
+        & .icons {
+          margin: 15px 0;
+
+          & .row {
+            display: flex;
+            height: $font-size * 4.1;
+            align-items: center;
+
+            & i {
+              font-size: 25px;
+              color: $font-color-c;
+            }
+
+            & .info {
+              margin-left: 30px;
+
+              & .head {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+
+      &.right {
+        & .text {
+          margin-bottom: 10px;
+          font-weight: 500;
+        }
+        & form {
+          & .field {
+            display: flex;
+            margin-bottom: 15px;
+            height: $font-size * 3;
+
+            & input,
+            & textarea {
+              height: 100%;
+              width: 100%;
+              border: 1px solid #8c93a8;
+              border-radius: 6px;
+              outline: none;
+              padding: 0 15px;
+              font-size: $font-size * 1.2;
+              transition: all 0.3s ease;
+            }
+          }
+
+          & .fields {
+            display: flex;
+            margin-bottom: 15px;
+
+            & .name {
+              margin-right: 10px;
+            }
+
+            & .email {
+              margin-left: 10px;
+            }
+
+            & .field {
+              height: $font-size * 3;
+              width: 100%;
+
+              & input {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+          & .textarea {
+            height: $font-size * 5;
+
+            & textarea {
+              padding-top: 10px;
+              resize: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

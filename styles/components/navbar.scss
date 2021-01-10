@@ -1,0 +1,111 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: ($font-size * 2) 0;
+  color: $font-color-b;
+  transition: all 0.3s ease;
+  z-index: $zIndex;
+
+  & .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $font-size * 5;
+    margin: auto;
+
+    @include desktop-d {
+      padding: 0 50px;
+    }
+
+    & .logo {
+      a {
+        font-size: $font-size * 2.2;
+        font-weight: 600;
+
+        & span {
+          color: $font-color-c;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    & .menu {
+      @include desktop-d {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background: $body-bg;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+
+        &.active {
+          left: 0;
+        }
+      }
+
+      & li {
+        display: inline-block;
+        list-style: none;
+        & a {
+          display: block;
+          font-size: $font-size * 1.15;
+          font-weight: 500;
+          margin-left: $font-size * 1.6;
+          transition: color 0.5s ease;
+
+          &:hover {
+            color: $font-color-c;
+          }
+
+          @include desktop-d {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: $font-size * 1.6;
+          }
+        }
+
+        @include desktop-d {
+          display: block;
+        }
+      }
+    }
+  }
+  // sticky slide
+  &.sticky {
+    padding: $font-size;
+    background: $font-color-c;
+
+    & .logo {
+      a {
+        & span {
+          color: $font-color-d;
+          &:hover {
+            color: $font-color-b;
+          }
+        }
+      }
+    }
+
+    & .menu li a:hover {
+      color: $font-color-d;
+    }
+  }
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+
+  @include desktop-d {
+    display: block;
+    z-index: $zIndex;
+
+    & i.active::before {
+      content: "\f00d";
+    }
+  }
+}

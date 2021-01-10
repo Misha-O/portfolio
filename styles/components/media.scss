@@ -1,0 +1,31 @@
+@mixin desktop-a {
+  @media screen and (max-width: $desktop-a) {
+    @content;
+  }
+}
+@mixin desktop-b {
+  @media screen and (max-width: $desktop-b) {
+    @content;
+  }
+}
+@mixin desktop-c {
+  @media screen and (max-width: $desktop-c) {
+    @content;
+  }
+}
+@mixin desktop-d {
+  @media screen and (max-width: $desktop-d) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}

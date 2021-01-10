@@ -1,0 +1,41 @@
+// vars
+$body-bg: #252627;
+$font-color-a: #ed5565;
+$font-color-b: #fff;
+$font-color-c: #dc143c;
+$font-color-d: #000;
+$font-size: 16px;
+// mixin
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// breakpoints
+$desktop-a: 1300px;
+$desktop-b: 1104px;
+$desktop-c: 991px;
+$desktop-d: 947px;
+$tablets: 768px;
+$phones: 480px;
+
+// z-index
+$zIndex: 999;
+// font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+// normalize
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+// import
+@import "./components/media.scss";
+@import "./components/general.scss";
+@import "./components/layout.scss";
+@import "./components/navbar.scss";
+@import "./components/hero.scss";
+@import "./components/button.scss";
+@import "./components/about.scss";
+@import "./components/projects.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";
