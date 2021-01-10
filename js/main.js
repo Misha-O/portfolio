@@ -1,13 +1,3 @@
-const submitBtn = document.getElementById("submit-button");
-const form = document.querySelector("form");
-submitBtn.addEventListener("click", () => {
-  form.reset();
-});
-// call reCaptcha
-function onSubmit(token) {
-  document.getElementById("form").submit();
-}
-
 // bouncy letters
 const spans = document.querySelectorAll("h1 span");
 spans.forEach((span) =>
@@ -92,3 +82,18 @@ $(document).ready(function () {
     },
   });
 });
+
+// clear inputs after submission
+const submitBtn = document.getElementById("submit-button");
+const inputs = document.querySelectorAll("input");
+const textarea = document.querySelector("textarea");
+submitBtn.addEventListener("click", () => {
+  inputs.forEach((input) => {
+    input.value = "";
+  });
+  textarea.value = "";
+});
+// call reCaptcha
+function onSubmit(token) {
+  document.getElementById("form").submit();
+}
