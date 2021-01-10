@@ -4,6 +4,10 @@
   & .contact__title {
     &::after {
       content: "get in touch";
+
+      @include phones-min {
+        bottom: -32px;
+      }
     }
   }
 

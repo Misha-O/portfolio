@@ -83,16 +83,6 @@ $(document).ready(function () {
   });
 });
 
-// clear inputs after submission
-const submitBtn = document.getElementById("submit-button");
-const inputs = document.querySelectorAll("input");
-const textarea = document.querySelector("textarea");
-submitBtn.addEventListener("click", () => {
-  inputs.forEach((input) => {
-    input.value = "";
-  });
-  textarea.value = "";
-});
 // call reCaptcha
 function onSubmit(token) {
   document.getElementById("form").submit();

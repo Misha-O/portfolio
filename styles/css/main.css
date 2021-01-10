@@ -353,6 +353,12 @@ img {
   left: 0;
 }
 
+.form--buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .button {
   height: 46.4px;
   width: 168px;
@@ -373,6 +379,18 @@ img {
 .button button:hover {
   color: crimson;
   background: none;
+}
+@media screen and (max-width: 947px) {
+  .button {
+    height: 40px;
+    width: 144px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    height: 40px;
+    width: 112px;
+  }
 }
 
 .scroll-up-btn {
@@ -521,6 +539,11 @@ img {
 }
 .contact .contact__title::after {
   content: "get in touch";
+}
+@media screen and (max-width: 320px) {
+  .contact .contact__title::after {
+    bottom: -32px;
+  }
 }
 .contact .contact-content {
   display: flex;
