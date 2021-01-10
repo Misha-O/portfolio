@@ -220,7 +220,7 @@ img {
 .hero {
   display: flex;
   height: 100vh;
-  min-height: 500px;
+  min-height: 650px;
 }
 .hero .max-width {
   margin: auto 0 auto 40px;

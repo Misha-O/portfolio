@@ -1,7 +1,13 @@
+const submitBtn = document.getElementById("submit-button");
+const form = document.querySelector("form");
+submitBtn.addEventListener("submit", () => {
+  form.reset();
+});
 // call reCaptcha
 function onSubmit(token) {
   document.getElementById("form").submit();
 }
+
 // bouncy letters
 const spans = document.querySelectorAll("h1 span");
 spans.forEach((span) =>
