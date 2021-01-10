@@ -1,6 +1,6 @@
 const submitBtn = document.getElementById("submit-button");
 const form = document.querySelector("form");
-submitBtn.addEventListener("submit", () => {
+submitBtn.addEventListener("click", () => {
   form.reset();
 });
 // call reCaptcha
