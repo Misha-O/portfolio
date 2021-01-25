@@ -38,7 +38,7 @@ $(document).ready(function () {
   });
 
   // typing animation
-  const typedSctringOne = ["CSS", "JavaScript", "jQuery", "React", "Node JS"];
+  const typedSctringOne = ["CSS", "JavaScript", "jQuery", "Vue JS", "Node JS"];
   var typed = new Typed("#typing-1", {
     strings: [...typedSctringOne],
     typeSpeed: 50,
